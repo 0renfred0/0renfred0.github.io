@@ -62,6 +62,7 @@ const PROJECTS = [
     {
         tab: "jams",
         title: "Mask Motel",
+        featured: true,
         description: "You are a mask artist making ends meet by crafting human disguises for monsters. Business is lucrative, but your customers can be quite... rowdy.",
         meta: "Global Game Jam SG 2026 · with JustHallowed & kulu",
         tags: ["Unity", "Horror", "Pixel Art"],
