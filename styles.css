@@ -1,37 +1,4 @@
 /* ==========================================================================
-   THEME A: CLEAN STUDIO (dark, minimal, one warm accent)
-   ========================================================================== */
-:root {
-    --bg: #0f1115;
-    --nav-bg: rgba(15, 17, 21, 0.82);
-    --surface: #161920;
-    --thumb-bg: #1e222b;
-    --text: #ececee;
-    --muted: #9a9ea8;
-    --accent: #ff6b4a;
-    --accent-text: #ff8a6e;
-    --accent-ink: #1a0a05;
-    --border: #23272f;
-    --border-strong: #343944;
-    --card-border: 1px solid #23272f;
-    --btn-border: 1px solid transparent;
-    --radius: 14px;
-    --radius-btn: 10px;
-    --radius-badge: 6px;
-    --tag-bg: #1e222b;
-    --tag-ink: #c3c6cd;
-    --tag-border: 0;
-    --badge-bg: rgba(15, 17, 21, 0.85);
-    --badge-ink: #ececee;
-    --shadow-hover: 0 18px 40px -18px rgba(0, 0, 0, 0.7);
-    --font-body: 'Inter', system-ui, sans-serif;
-    --font-display: 'Space Grotesk', 'Inter', sans-serif;
-    --display-weight: 500;
-}
-.hero-title .hl { color: var(--accent); }
-.card:hover { border-color: #343944; }
-
-/* ==========================================================================
    LAYOUT (shared). Theme colours and fonts are the variables at the top.
    ========================================================================== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -172,3 +139,35 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
+/* ==========================================================================
+   THEME A: CLEAN STUDIO (dark, minimal, one warm accent)
+   ========================================================================== */
+:root {
+    --bg: #0f1115;
+    --nav-bg: rgba(15, 17, 21, 0.82);
+    --surface: #161920;
+    --thumb-bg: #1e222b;
+    --text: #ececee;
+    --muted: #9a9ea8;
+    --accent: #ff6b4a;
+    --accent-text: #ff8a6e;
+    --accent-ink: #1a0a05;
+    --border: #23272f;
+    --border-strong: #343944;
+    --card-border: 1px solid #23272f;
+    --btn-border: 1px solid transparent;
+    --radius: 14px;
+    --radius-btn: 10px;
+    --radius-badge: 6px;
+    --tag-bg: #1e222b;
+    --tag-ink: #c3c6cd;
+    --tag-border: 0;
+    --badge-bg: rgba(15, 17, 21, 0.85);
+    --badge-ink: #ececee;
+    --shadow-hover: 0 18px 40px -18px rgba(0, 0, 0, 0.7);
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-display: 'Space Grotesk', 'Inter', sans-serif;
+    --display-weight: 500;
+}
+.hero-title .hl { color: var(--accent); }
+.card:hover { border-color: #343944; }
