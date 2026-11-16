@@ -3,180 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Renfred Lee - aspiring game developer studying Real-Time Interactive Simulation at DigiPen Singapore / SIT.">
+    <meta name="description" content="Portfolio of Renfred Lee, aspiring game developer studying Real-Time Interactive Simulation at DigiPen Singapore / SIT.">
     <title>Renfred Lee | Game Developer Portfolio</title>
-
-    <link rel="stylesheet" href="styles.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a class="skip" href="#work">Skip to projects</a>
 
-    <div class="crt-overlay" aria-hidden="true"></div>
-
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">&gt;Renfred_Lee_</a>
+    <header class="nav">
+        <div class="wrap nav-inner">
+            <a href="#top" class="logo">Renfred Lee</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
             <nav class="nav-menu" id="nav-menu">
-                <a href="#about" class="nav-link"><span class="nav-num">01.</span> About</a>
-                <a href="#skills" class="nav-link"><span class="nav-num">02.</span> Skills</a>
-                <a href="#projects" class="nav-link"><span class="nav-num">03.</span> Projects</a>
-                <a href="#contact" class="nav-link"><span class="nav-num">04.</span> Contact</a>
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="https://github.com/0renfred0" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </nav>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-            </button>
         </div>
     </header>
 
-    <main>
-        <!-- Hero -->
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
-                <p class="hero-subtitle">&gt; SYSTEM INITIALIZED...</p>
-                <h1 class="hero-title glitch-text" data-text="RENFRED LEE">Renfred Lee</h1>
-                <h2 class="hero-role">Aspiring Game Developer <span class="highlight">| RTIS @ DigiPen Singapore</span></h2>
-                <p class="hero-tagline">I build games across Unity, VR and custom C++ engines, from game-jam prototypes to full team projects. Most of them are playable right here.</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary"><i class="fas fa-gamepad"></i> View Projects</a>
-                    <a href="https://reeleeeeee.itch.io/" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fab fa-itch-io"></i> Itch.io</a>
-                    <a href="https://github.com/0renfred0" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://www.linkedin.com/in/renfred-lee-733bb3185/" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                </div>
+    <main id="top">
+        <section class="hero wrap">
+            <p class="eyebrow">Aspiring game developer</p>
+            <h1 class="hero-title">Building games people <span class="hl">want to replay.</span></h1>
+            <p class="hero-sub">Renfred Lee · Real-Time Interactive Simulation @ DigiPen Singapore × SIT · Unity, VR and C++</p>
+            <div class="hero-cta">
+                <a href="#work" class="btn btn-primary">See my games <i class="fas fa-arrow-down"></i></a>
+                <a href="mailto:RenfredLZA@hotmail.com" class="btn btn-ghost">Get in touch</a>
             </div>
         </section>
 
-        <!-- About -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title"><span class="accent-number">01.</span> // ABOUT_ME</h2>
-                <div class="about-grid">
-                    <div class="about-text">
-                        <p>I'm a game design student and <strong>aspiring game developer</strong>, currently studying Computer Science in <strong>Real-Time Interactive Simulation (RTIS)</strong> at DigiPen Institute of Technology Singapore, in partnership with the Singapore Institute of Technology (SIT).</p>
-                        <p>Before DigiPen, I graduated from <strong>Ngee Ann Polytechnic</strong> with a Diploma in Immersive Media &amp; Game Design. This site collects my academic projects, game-jam entries and personal passion projects.</p>
-                    </div>
-                    <ul class="edu-list">
-                        <li><span class="edu-tag">NOW</span> BSc Computer Science in RTIS<br><small>DigiPen Singapore × SIT</small></li>
-                        <li><span class="edu-tag">DIPLOMA</span> Immersive Media &amp; Game Design<br><small>Ngee Ann Polytechnic</small></li>
+        <section class="wrap section reveal">
+            <article class="featured" id="featured"></article>
+        </section>
+
+        <section id="work" class="wrap section">
+            <div class="section-head reveal">
+                <h2 class="section-title">Selected work</h2>
+                <div class="filters" role="group" aria-label="Filter projects">
+                    <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+                    <button class="filter" data-filter="games" aria-pressed="false">Games</button>
+                    <button class="filter" data-filter="jams" aria-pressed="false">Game jams</button>
+                    <button class="filter" data-filter="techart" aria-pressed="false">Tech art and apps</button>
+                </div>
+            </div>
+            <div class="grid" id="project-grid"></div>
+        </section>
+
+        <section id="about" class="wrap section about reveal">
+            <div>
+                <h2 class="section-title">About</h2>
+                <p>I'm a game design student and aspiring game developer, currently studying Computer Science in Real-Time Interactive Simulation (RTIS) at DigiPen Institute of Technology Singapore, in partnership with the Singapore Institute of Technology.</p>
+                <p>Before DigiPen, I graduated from Ngee Ann Polytechnic with a Diploma in Immersive Media and Game Design. Here you'll find my academic projects, game-jam entries and personal passion projects.</p>
+            </div>
+            <div class="about-side">
+                <div class="info-block">
+                    <h3>Education</h3>
+                    <ul class="timeline">
+                        <li><strong>BSc Computer Science in RTIS</strong><span>DigiPen Singapore × SIT · Current</span></li>
+                        <li><strong>Diploma in Immersive Media and Game Design</strong><span>Ngee Ann Polytechnic</span></li>
+                    </ul>
+                </div>
+                <div class="info-block">
+                    <h3>Toolkit</h3>
+                    <ul class="tags tags-lg">
+                        <li>C++</li><li>C#</li><li>Unity</li><li>VR</li><li>Alpha Engine</li><li>Git</li><li>Level design</li><li>Game VFX</li><li>3D modelling</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Skills -->
-        <section id="skills" class="section section-alt">
-            <div class="container">
-                <h2 class="section-title"><span class="accent-number">02.</span> // SKILLS_MATRIX</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fas fa-terminal"></i></div>
-                        <h3>Languages</h3>
-                        <ul>
-                            <li>C++</li>
-                            <li>C#</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fas fa-microchip"></i></div>
-                        <h3>Engines &amp; Tools</h3>
-                        <ul>
-                            <li>Unity (2D / 3D / VR / Mobile)</li>
-                            <li>DigiPen Alpha Engine</li>
-                            <li>Git &amp; GitHub</li>
-                        </ul>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fas fa-chess-board"></i></div>
-                        <h3>Design &amp; Art</h3>
-                        <ul>
-                            <li>Gameplay Programming</li>
-                            <li>Level Design</li>
-                            <li>Game VFX</li>
-                            <li>3D Modelling</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects (cards are generated from projects.js) -->
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-title"><span class="accent-number">03.</span> // PROJECT_ARCHIVE</h2>
-
-                <div class="project-tabs" role="tablist">
-                    <button class="tab-btn active" data-filter="games" role="tab">01_GAMES</button>
-                    <button class="tab-btn" data-filter="jams" role="tab">02_GAME JAMS</button>
-                    <button class="tab-btn" data-filter="techart" role="tab">03_TECH ART, LEVELS &amp; APPS</button>
-                </div>
-
-                <div class="projects-container">
-                    <div class="project-subgrid active" id="tab-games">
-                        <div class="slider-wrapper">
-                            <button class="slide-arrow prev-arrow" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
-                            <div class="project-slider" data-tab="games"></div>
-                            <button class="slide-arrow next-arrow" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
-                        </div>
-                    </div>
-                    <div class="project-subgrid" id="tab-jams">
-                        <div class="slider-wrapper">
-                            <button class="slide-arrow prev-arrow" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
-                            <div class="project-slider" data-tab="jams"></div>
-                            <button class="slide-arrow next-arrow" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
-                        </div>
-                    </div>
-                    <div class="project-subgrid" id="tab-techart">
-                        <div class="slider-wrapper">
-                            <button class="slide-arrow prev-arrow" aria-label="Scroll Left"><i class="fas fa-chevron-left"></i></button>
-                            <div class="project-slider" data-tab="techart"></div>
-                            <button class="slide-arrow next-arrow" aria-label="Scroll Right"><i class="fas fa-chevron-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="section section-alt">
-            <div class="container contact-container">
-                <h2 class="section-title"><span class="accent-number">04.</span> // TRANSMIT_MESSAGE</h2>
-                <p class="contact-text">I'm looking for game programming and technical design internships for 2027. Let's connect and build something together.</p>
-                <a href="mailto:RenfredLZA@hotmail.com" class="btn btn-primary btn-large"><i class="fas fa-envelope"></i> Open Transmission</a>
+        <section id="contact" class="wrap section contact reveal">
+            <h2 class="contact-title">Let's build something together.</h2>
+            <p>I'm looking for game programming and technical design internships for 2027.</p>
+            <a href="mailto:RenfredLZA@hotmail.com" class="btn btn-primary btn-lg"><i class="fas fa-envelope"></i> RenfredLZA@hotmail.com</a>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/renfred-lee-733bb3185/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/0renfred0" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://reeleeeeee.itch.io/" target="_blank" rel="noopener"><i class="fab fa-itch-io"></i> itch.io</a>
+                <a href="https://sketchfab.com/RenfredLee" target="_blank" rel="noopener"><i class="fas fa-cube"></i> Sketchfab</a>
+                <a href="https://twitter.com/LeeRenfred" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i> X</a>
             </div>
         </section>
     </main>
 
-    <!-- Media popup (play / watch) -->
-    <div class="modal" id="media-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <footer class="footer wrap">
+        <p>© <span id="year">2026</span> Renfred Lee</p>
+        <p>Built by hand, hosted on GitHub Pages.</p>
+    </footer>
+
+    <div class="modal" id="media-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-backdrop" data-close></div>
         <div class="modal-window">
-            <div class="modal-header">
-                <span class="modal-title" id="modal-title"></span>
-                <div class="modal-tools">
+            <div class="modal-head">
+                <span id="modal-title"></span>
+                <div>
                     <button class="modal-btn" id="modal-fullscreen" aria-label="Fullscreen"><i class="fas fa-expand"></i></button>
-                    <button class="modal-btn" data-close aria-label="Close"><i class="fas fa-times"></i></button>
+                    <button class="modal-btn modal-close" data-close aria-label="Close"><i class="fas fa-xmark"></i></button>
                 </div>
             </div>
-            <div class="modal-body" id="modal-body"></div>
-            <div class="modal-footer" id="modal-footer"></div>
+            <div id="modal-body"></div>
+            <p class="modal-foot" id="modal-footer"></p>
         </div>
     </div>
-
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>&copy; 2026 Renfred Lee. Ready Player One.</p>
-            <div class="social-links">
-                <a href="https://reeleeeeee.itch.io/" target="_blank" rel="noopener" aria-label="Itch.io"><i class="fab fa-itch-io"></i></a>
-                <a href="https://github.com/0renfred0" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/renfred-lee-733bb3185/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://sketchfab.com/RenfredLee" target="_blank" rel="noopener" aria-label="Sketchfab"><i class="fas fa-cube"></i></a>
-                <a href="https://twitter.com/LeeRenfred" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
-            </div>
-        </div>
-    </footer>
 
     <script src="projects.js"></script>
     <script src="script.js"></script>
