@@ -22,7 +22,6 @@ const PROJECTS = [
         tags: ["C++", "Alpha Engine"],
         thumb: "../../assets/images/overseas.png",
         actions: [
-            { type: "download", url: "../../assets/downloads/Overseas.exe", label: "Download (Windows)" },
             { type: "youtube", id: "lon1mHgS8kM", label: "Watch" }
         ]
     },
