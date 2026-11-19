@@ -16,6 +16,28 @@ const PROJECTS = [
     /* ---------------- GAMES ---------------- */
     {
         tab: "games",
+        title: "Descent",
+        description: "A 2D puzzle-platformer set deep inside a molten cavern. Leap across lava pools and spike traps, activate pressure plates to open the way forward, and keep pushing down. Built by Team CRASHOUTS in our own custom C++ engine.",
+        meta: "DigiPen Singapore · Team CRASHOUTS · Custom engine",
+        tags: ["C++", "C#", "Custom Engine", "2D Platformer"],
+        thumb: "assets/images/descent.jpg",
+        actions: [
+            { type: "video", src: "assets/videos/descent-gameplay.mp4", label: "Watch Gameplay" }
+        ]
+    },
+    {
+        tab: "games",
+        title: "Father",
+        description: "A Game Boy-inspired top-down survival game. Weave through traffic, survive vicious attacks, grab unique power-ups, and take on the towering boss, Father.",
+        meta: "DigiPen Singapore · Team The GOATS",
+        tags: ["C", "CProcessing", "2D", "Boss Fight"],
+        thumb: "assets/images/father.png",
+        actions: [
+            { type: "video", src: "assets/videos/father-trailer.mp4", label: "Watch Trailer" }
+        ]
+    },
+    {
+        tab: "games",
         title: "Overseas [GAM150]",
         description: "A tense top-down survival fishing game where you brave deadly hazards and manage resources to hit your daily quota.",
         meta: "DigiPen Singapore · Team project",
@@ -75,6 +97,17 @@ const PROJECTS = [
     },
 
     /* ---------------- TECH ART, LEVELS & APPS ---------------- */
+    {
+        tab: "techart",
+        title: "Crashouts Engine: Level Editor",
+        description: "The custom C++ engine and editor behind Descent. It includes a sprite sheet and animation clip editor, a rule-based tilemap editor with layers and colliders, C# scripting that calls into the C++ core, a particle system (fire, fireballs, explosions, trajectories), and play / pause / save controls for editing scenes live.",
+        meta: "Team CRASHOUTS · Engine and tools",
+        tags: ["C++", "C# Scripting", "Editor Tools", "Particles"],
+        thumb: "assets/images/crashouts-level-editor.jpg",
+        actions: [
+            { type: "video", src: "assets/videos/crashouts-level-editor.mp4", label: "Watch Editor Tour" }
+        ]
+    },
     {
         tab: "techart",
         title: "Game Effect Design",

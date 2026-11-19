@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const SHELVES = [
         { tab: 'games',   title: 'Games' },
         { tab: 'jams',    title: 'Game jams' },
-        { tab: 'techart', title: 'Tech art, levels and apps' }
+        { tab: 'techart', title: 'Engine, tools and tech art' }
     ];
     const ACTION_DEFAULTS = {
         play:     { icon: 'fas fa-play',     label: 'Play' },
