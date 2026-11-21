@@ -55,7 +55,7 @@ CASES = [
         "slug": "mask-motel",
         "kicker": "Game jam · Unity",
         "title": "Mask Motel: a horror game in 48 hours",
-        "pitch": "Built with two teammates at Global Game Jam 2026 Singapore. I programmed the camera systems and weapon interactions, laid out the levels, and made the scope call that let us ship on time: 2D characters instead of 3D.",
+        "pitch": "Made with two teammates at Global Game Jam 2026 Singapore. I wrote the camera and weapon code and laid out the levels. To finish in 48 hours, we went with 2D characters instead of 3D.",
         "facts": [("Role", "Gameplay programmer, level layout, visual assets"), ("Team", "3, with JustHallowed and kulu"), ("Timeline", "48 hours, Jan 2026"), ("Tech", "Unity, C#")],
         "media": {"type": "itch", "id": "16527448", "poster": "https://img.itch.zone/aW1nLzI1MzE2Nzc0LnBuZw==/original/RrLPMN.png", "caption": "Playable right here. Click the game to give it keyboard focus."},
         "sections": [
