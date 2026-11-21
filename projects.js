@@ -38,8 +38,8 @@ const PROJECTS = [
     },
     {
         tab: "games",
-        title: "Overseas [GAM150]",
-        description: "A tense top-down survival fishing game where you brave deadly hazards and manage resources to hit your daily quota.",
+        title: "Overseas",
+        description: "A top-down survival game about fishing in dangerous waters. Each day you need to hit a fishing quota, avoid hazards and keep your supplies up.",
         meta: "DigiPen Singapore · Team project",
         tags: ["C++", "Alpha Engine"],
         thumb: "assets/images/overseas.png",
