@@ -72,7 +72,7 @@ const PROJECTS = [
     {
         tab: "games",
         title: "Fruit Jump",
-        description: "A 2D platformer made in Unity, built around a unique mechanic: the whole game is controlled by tapping with one finger.",
+        description: "A 2D mobile platformer made in Unity. You play the whole game by tapping with one finger.",
         meta: "Ngee Ann Polytechnic",
         tags: ["Unity", "C#", "2D", "Mobile"],
         thumb: WIX_IMG("0aaa46_9443466259a9416199d094047e5315a2f000.jpg"),
@@ -111,7 +111,7 @@ const PROJECTS = [
     {
         tab: "techart",
         title: "Game Effect Design",
-        description: "A set of game effects made in Unity, each representing a different element from Genshin Impact.",
+        description: "Particle effects I made in Unity, one for each element in Genshin Impact.",
         meta: "VFX study",
         tags: ["Unity", "VFX", "Particles"],
         thumb: WIX_IMG("0aaa46_87564f387b5d4c819d7a42096f547973f002.jpg"),
@@ -122,7 +122,7 @@ const PROJECTS = [
     {
         tab: "techart",
         title: "3D Apartment Render",
-        description: "A fully modelled and lit 3D apartment interior, presented as a rendered walkthrough video.",
+        description: "A 3D apartment interior I built and rendered as a walkthrough video.",
         meta: "3D modelling and rendering",
         tags: ["3D", "Modelling", "Rendering"],
         thumb: YT_IMG("1KH5lmCPn0k"),
@@ -144,7 +144,7 @@ const PROJECTS = [
     {
         tab: "techart",
         title: "Safe Dining",
-        description: "A mobile application made in Unity to promote safe distancing in F&B outlets.",
+        description: "A Unity mobile app I built and designed to encourage safe distancing in restaurants and food courts during the COVID period.",
         meta: "Mobile app",
         tags: ["Unity", "C#", "Mobile"],
         thumb: YT_IMG("IRGwIJ_fC5Y"),
