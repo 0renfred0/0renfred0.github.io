@@ -133,7 +133,7 @@ const PROJECTS = [
     {
         tab: "techart",
         title: "Character Walk Animation",
-        description: "A character walk animation set up and showcased in Unity.",
+        description: "A walking character I set up in Unity, with the animation controller and blend between idle and walk.",
         meta: "Character animation",
         tags: ["Unity", "Animation"],
         thumb: YT_IMG("rYcTa6vmirY"),
