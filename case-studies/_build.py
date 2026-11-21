@@ -12,8 +12,8 @@ CASES = [
         "slug": "descent",
         "kicker": "Team project · C++",
         "title": "Descent: building the engine behind the game",
-        "pitch": "I was engine lead on a team of 8 building our own C++ engine. I wrote its entity-component-system, contributed to the OpenGL 2D renderer and the ImGui editor tools, and set the technical direction that took it from an empty project to a finished puzzle-platformer.",
-        "facts": [("Role", "Engine Lead"), ("Team", "8, Team CRASHOUTS"), ("Timeline", "Sep 2025 – Apr 2026"), ("Tech", "C++, OpenGL, C# scripting, Dear ImGui")],
+        "pitch": "I was technical lead on a team of 8 building our own C++ engine. I wrote its entity-component-system, contributed to the OpenGL 2D renderer and the ImGui editor tools, and set the technical direction that took it from an empty project to a finished puzzle-platformer.",
+        "facts": [("Role", "Technical Lead"), ("Team", "8, Team CRASHOUTS"), ("Timeline", "Sep 2025 – Apr 2026"), ("Tech", "C++, OpenGL, C# scripting, Dear ImGui")],
         "media": {"type": "video", "src": "../assets/videos/descent-gameplay.mp4", "poster": "../assets/images/descent.jpg", "caption": "Descent gameplay, running in our engine."},
         "sections": [
             ("The problem", "problem", """
@@ -32,7 +32,7 @@ CASES = [
   <figure class="cs-figure"><img src="../assets/images/case/descent-lava.jpg" alt="Descent: the player beside a lava pool in a red cavern" loading="lazy"></figure>
   <figure class="cs-figure"><img src="../assets/images/case/descent-plates.jpg" alt="Descent: the player near a glowing rune stone, with the pressure plate counter in the corner" loading="lazy"></figure>
 </div>
-<p><strong>Technical direction.</strong> As engine lead I set the architecture and priorities across rendering, entity management and tooling, so a multidisciplinary team could work in parallel without blocking each other.</p>"""),
+<p><strong>Technical direction.</strong> As technical lead I set the architecture and priorities across rendering, entity management and tooling, so a multidisciplinary team could work in parallel without blocking each other.</p>"""),
             ("Tools for the whole team", "tools", """
 <p>An engine is only useful if the rest of the team can build with it. Together we shipped an in-engine editor with:</p>
 <ul>
