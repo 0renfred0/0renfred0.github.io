@@ -12,7 +12,7 @@ CASES = [
         "slug": "descent",
         "kicker": "Flagship · Engine lead",
         "title": "Descent: building the engine behind the game",
-        "pitch": "As engine lead on a team of 8, I designed the entity-component-system and the OpenGL 2D renderer for our custom C++ engine, and set the technical direction that took it from an empty project to a finished puzzle-platformer with its own level editor.",
+        "pitch": "I was engine lead on a team of 8 building our own C++ engine. I wrote its entity-component-system, contributed to the OpenGL 2D renderer and the ImGui editor tools, and set the technical direction that took it from an empty project to a finished puzzle-platformer.",
         "facts": [("Role", "Engine Lead"), ("Team", "8, Team CRASHOUTS"), ("Timeline", "Sep 2025 – Apr 2026"), ("Tech", "C++, OpenGL, C# scripting, Dear ImGui")],
         "media": {"type": "video", "src": "../assets/videos/descent-gameplay.mp4", "poster": "../assets/images/descent.jpg", "caption": "Descent gameplay, running in our engine."},
         "sections": [
@@ -27,7 +27,7 @@ CASES = [
 </ul>"""),
             ("What I built", "built", """
 <p><strong>An entity-component-system built on sparse and dense sets.</strong> Each component type lives in a tightly packed (dense) array, and a sparse array maps every entity ID straight to its slot. Looking up an entity's component is O(1), and systems walk through contiguous memory instead of chasing pointers, which keeps the CPU cache happy as entity counts grow.</p>
-<p><strong>The OpenGL 2D rendering pipeline.</strong> I designed how the engine draws a frame: layered draw calls so backgrounds, gameplay objects and UI always sort correctly, plus lighting on top. It renders every scene in Descent.</p>
+<p><strong>Work on the renderer and editor.</strong> I contributed to the OpenGL 2D renderer, which draws each frame in layers with lighting on top, and helped build the ImGui editor tools the rest of the team used to make levels.</p>
 <div class="cs-gallery">
   <figure class="cs-figure"><img src="../assets/images/case/descent-lava.jpg" alt="Descent: the player beside a lava pool in a red cavern" loading="lazy"></figure>
   <figure class="cs-figure"><img src="../assets/images/case/descent-plates.jpg" alt="Descent: the player near a glowing rune stone, with the pressure plate counter in the corner" loading="lazy"></figure>
