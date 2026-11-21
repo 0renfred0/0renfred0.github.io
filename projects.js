@@ -50,7 +50,7 @@ const PROJECTS = [
     {
         tab: "games",
         title: "Antsassin (2021)",
-        description: "A VR game developed by Epic Boyz Studios. Team: Mervin Ko (Sound & VFX), Renfred Lee (Developer & Programmer), Kyle Asuncion (Art Lead & Creative Producer).",
+        description: "A VR game made by a team of 3 at Epic Boyz Studios, with Mervin Ko (sound and VFX) and Kyle Asuncion (art and creative direction). I was the developer and programmer.",
         meta: "Role: Developer & Programmer",
         tags: ["VR", "Team of 3"],
         thumb: YT_IMG("KHbA7OeglYE"),
