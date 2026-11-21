@@ -28,7 +28,7 @@ const PROJECTS = [
     {
         tab: "games",
         title: "Father",
-        description: "A top-down survival game in a Game Boy style, made in C with CProcessing. Dodge traffic and attacks, collect power-ups, and fight the boss, Father.",
+        description: "A top-down survival game in a Game Boy style, made in C with CProcessing. Dodge traffic and attacks, collect power-ups, and fight the boss, Father. I worked on the grid-based movement and the tile-sheet animation system.",
         meta: "DigiPen Singapore · Team The GOATS",
         tags: ["C", "CProcessing", "2D", "Boss Fight"],
         thumb: "assets/images/father.png",

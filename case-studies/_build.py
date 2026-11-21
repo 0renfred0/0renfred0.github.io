@@ -34,7 +34,7 @@ CASES = [
 </div>
 <p><strong>Technical direction.</strong> As technical lead I set the architecture and priorities across rendering, entity management and tooling, so a multidisciplinary team could work in parallel without blocking each other.</p>"""),
             ("Tools for the whole team", "tools", """
-<p>An engine is only useful if the rest of the team can build with it. Together we shipped an in-engine editor with:</p>
+<p>The team also built an editor so designers and artists could make levels without writing C++. It has:</p>
 <ul>
 <li>A <strong>sprite sheet and animation clip editor</strong>, so artists can cut frames and save animation sets.</li>
 <li>A <strong>rule-based tilemap editor</strong> with layers and colliders for painting levels.</li>
