@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=202611191727">
+    <link rel="stylesheet" href="styles.css?v=202611211724">
 </head>
 <body>
     <a class="skip" href="#work">Skip to projects</a>
@@ -19,6 +19,7 @@
             <a href="#top" class="logo">Renfred Lee</a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
             <nav class="nav-menu" id="nav-menu">
+                <a href="#case-studies">Case studies</a>
                 <a href="#work">Library</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
@@ -31,20 +32,56 @@
         <!-- Playable hero: the game only loads when the visitor clicks, so the page stays fast and silent -->
         <section class="hero hero-play wrap">
             <div class="hero-text">
-                <p class="eyebrow">Aspiring game developer</p>
+                <p class="eyebrow">Engine and gameplay programmer</p>
                 <h1 class="hero-title">Building games people <span class="hl">want to replay.</span></h1>
-                <p class="hero-sub">Renfred Lee · Real-Time Interactive Simulation @ DigiPen Singapore × SIT · Unity, VR and C++</p>
+                <p class="hero-sub">Renfred Lee · Computer Science (RTIS) @ DigiPen Singapore × SIT · C++, OpenGL and Unity · Former Unity developer at HelloHolo</p>
                 <div class="hero-cta">
-                    <a href="#work" class="btn btn-primary">Browse my games <i class="fas fa-arrow-down"></i></a>
+                    <a href="#case-studies" class="btn btn-primary">Read my case studies <i class="fas fa-arrow-down"></i></a>
                     <a href="mailto:RenfredLZA@hotmail.com" class="btn btn-ghost">Get in touch</a>
                 </div>
             </div>
             <div class="hero-game" id="hero-game"></div>
         </section>
 
+        <section id="case-studies" class="wrap section">
+            <div class="section-head reveal">
+                <h2 class="section-title">Case studies</h2>
+                <p class="section-note">Three projects in depth: the problem, the constraints, and what I built.</p>
+            </div>
+            <div class="cases">
+                <a class="case-card reveal" href="case-studies/descent.html">
+                    <span class="case-art"><img src="assets/images/descent.jpg" alt="" loading="lazy"></span>
+                    <span class="case-body">
+                        <span class="eyebrow">Flagship · Engine lead</span>
+                        <span class="case-title">Descent and the Crashouts Engine</span>
+                        <span class="case-desc">Led a team of 8 building a custom C++ engine: I designed its ECS and OpenGL 2D renderer.</span>
+                        <span class="case-more">Read case study <i class="fas fa-arrow-right"></i></span>
+                    </span>
+                </a>
+                <a class="case-card reveal" href="case-studies/mask-motel.html">
+                    <span class="case-art"><img src="https://img.itch.zone/aW1nLzI1MzE2Nzc0LnBuZw==/original/RrLPMN.png" alt="" loading="lazy"></span>
+                    <span class="case-body">
+                        <span class="eyebrow">Constrained · 48 hours</span>
+                        <span class="case-title">Mask Motel</span>
+                        <span class="case-desc">A horror game built by 3 people at Global Game Jam 2026, and the scope call that let us ship.</span>
+                        <span class="case-more">Read case study <i class="fas fa-arrow-right"></i></span>
+                    </span>
+                </a>
+                <a class="case-card reveal" href="case-studies/graphics-pipeline.html">
+                    <span class="case-art case-art-metric"><strong>60+ FPS</strong><small>200+ textured models · PBR · occlusion culling</small></span>
+                    <span class="case-body">
+                        <span class="eyebrow">Specific skill · Rendering</span>
+                        <span class="case-title">Real-time graphics pipeline</span>
+                        <span class="case-desc">A solo C++ and OpenGL renderer with physically based materials and GPU occlusion culling.</span>
+                        <span class="case-more">Read case study <i class="fas fa-arrow-right"></i></span>
+                    </span>
+                </a>
+            </div>
+        </section>
+
         <section id="work" class="wrap section">
             <div class="section-head reveal">
-                <h2 class="section-title">Game library</h2>
+                <h2 class="section-title">More work</h2>
                 <p class="section-note">Click any box to see details, play or watch.</p>
             </div>
             <div id="shelves"></div>
@@ -53,21 +90,27 @@
         <section id="about" class="wrap section about reveal">
             <div>
                 <h2 class="section-title">About</h2>
-                <p>I'm a game design student and aspiring game developer, currently studying Computer Science in Real-Time Interactive Simulation (RTIS) at DigiPen Institute of Technology Singapore, in partnership with the Singapore Institute of Technology.</p>
-                <p>Before DigiPen, I graduated from Ngee Ann Polytechnic with a Diploma in Immersive Media and Game Design. Here you'll find my academic projects, game-jam entries and personal passion projects.</p>
+                <p>I'm studying Computer Science in Real-Time Interactive Simulation (RTIS) at DigiPen Institute of Technology Singapore, in partnership with the Singapore Institute of Technology. I'm most at home in engine architecture, real-time rendering and developer tools: the systems that let a team make a game.</p>
+                <p>Before DigiPen, I spent a year as a Unity developer at HelloHolo, shipping mixed reality apps for clients, and graduated from Ngee Ann Polytechnic with a Diploma in Immersive Media and Game Design.</p>
             </div>
             <div class="about-side">
                 <div class="info-block">
+                    <h3>Experience</h3>
+                    <ul class="timeline">
+                        <li><strong>Unity Developer, HelloHolo</strong><span>Sep 2021 – Sep 2022 · Shipped 2 HoloLens 2 apps and 1 training app for clients, and ran the live client demos</span></li>
+                    </ul>
+                </div>
+                <div class="info-block">
                     <h3>Education</h3>
                     <ul class="timeline">
-                        <li><strong>BSc Computer Science in RTIS</strong><span>DigiPen Singapore × SIT · Current</span></li>
+                        <li><strong>BSc (Hons) Computer Science in RTIS</strong><span>DigiPen Singapore × SIT · until Apr 2028</span></li>
                         <li><strong>Diploma in Immersive Media and Game Design</strong><span>Ngee Ann Polytechnic</span></li>
                     </ul>
                 </div>
                 <div class="info-block">
                     <h3>Toolkit</h3>
                     <ul class="tags tags-lg">
-                        <li>C++</li><li>C#</li><li>Unity</li><li>VR</li><li>Alpha Engine</li><li>Git</li><li>Level design</li><li>Game VFX</li><li>3D modelling</li>
+                        <li>C++</li><li>C</li><li>C#</li><li>Python</li><li>GLSL / HLSL</li><li>OpenGL</li><li>Dear ImGui</li><li>Unity</li><li>HoloLens / VR</li><li>CMake</li><li>Visual Studio</li><li>Git</li>
                     </ul>
                 </div>
             </div>
@@ -107,7 +150,7 @@
         </div>
     </div>
 
-    <script src="projects.js?v=202611191727"></script>
-    <script src="script.js?v=202611191727"></script>
+    <script src="projects.js?v=202611211724"></script>
+    <script src="script.js?v=202611211724"></script>
 </body>
 </html>

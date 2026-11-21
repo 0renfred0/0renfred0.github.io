@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="As engine lead on a team of 8, I designed the entity-component-system and the OpenGL 2D renderer for our custom C++ engine, and set the technical direction that took it from an empty project to a finished puzzle-platformer with its own level editor.">
+    <title>Descent: building the engine behind the game | Renfred Lee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css?v=202611211724">
+    <link rel="stylesheet" href="case.css?v=202611211724">
+</head>
+<body>
+    <header class="nav">
+        <div class="wrap nav-inner">
+            <a href="../" class="logo">Renfred Lee</a>
+            <nav class="cs-nav">
+                <a href="../#case-studies">Case studies</a>
+                <a href="../#work">Library</a>
+                <a href="../#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="wrap cs-hero">
+            <a class="cs-back" href="../#case-studies"><i class="fas fa-arrow-left"></i> All case studies</a>
+            <p class="eyebrow">Flagship · Engine lead</p>
+            <h1 class="cs-title">Descent: building the engine behind the game</h1>
+            <p class="cs-pitch">As engine lead on a team of 8, I designed the entity-component-system and the OpenGL 2D renderer for our custom C++ engine, and set the technical direction that took it from an empty project to a finished puzzle-platformer with its own level editor.</p>
+            <dl class="cs-facts"><div><dt>Role</dt><dd>Engine Lead</dd></div><div><dt>Team</dt><dd>8, Team CRASHOUTS</dd></div><div><dt>Timeline</dt><dd>Sep 2025 – Apr 2026</dd></div><div><dt>Tech</dt><dd>C++, OpenGL, C# scripting, Dear ImGui</dd></div></dl>
+            
+        </section>
+        <section class="wrap"><div class="cs-media"><video src="../assets/videos/descent-gameplay.mp4" poster="../assets/images/descent.jpg" controls preload="none" playsinline></video></div><p class="cs-caption">Descent gameplay, running in our engine.</p></section>
+        <div class="wrap cs-body">
+            <nav class="cs-toc" aria-label="On this page"><a href="#problem">The problem</a><a href="#constraints">Constraints</a><a href="#built">What I built</a><a href="#tools">Tools for the whole team</a><a href="#result">Result</a></nav>
+            <article><section class="cs-section" id="problem"><span class="cs-step">01</span><h2>The problem</h2>
+<p>Our year-long team project had one big rule: <strong>no off-the-shelf engine</strong>. Before Descent could exist, we had to build the engine it runs on, along with tools good enough for designers and artists to make levels without touching C++.</p></section><section class="cs-section" id="constraints"><span class="cs-step">02</span><h2>Constraints</h2>
+<ul>
+<li><strong>One academic year</strong> (September to April), alongside every other module.</li>
+<li><strong>8 people across programming, design and art</strong>, all depending on the engine at the same time.</li>
+<li><strong>Everything from scratch</strong> in C++ and OpenGL. No Unity, no Unreal.</li>
+<li>The game had to be <strong>finished and playable</strong> for course assessment.</li>
+</ul></section><section class="cs-section" id="built"><span class="cs-step">03</span><h2>What I built</h2>
+<p><strong>An entity-component-system built on sparse and dense sets.</strong> Each component type lives in a tightly packed (dense) array, and a sparse array maps every entity ID straight to its slot. Looking up an entity's component is O(1), and systems walk through contiguous memory instead of chasing pointers, which keeps the CPU cache happy as entity counts grow.</p>
+<p><strong>The OpenGL 2D rendering pipeline.</strong> I designed how the engine draws a frame: layered draw calls so backgrounds, gameplay objects and UI always sort correctly, plus lighting on top. It renders every scene in Descent.</p>
+<div class="cs-gallery">
+  <figure class="cs-figure"><img src="../assets/images/case/descent-lava.jpg" alt="Descent: the player beside a lava pool in a red cavern" loading="lazy"></figure>
+  <figure class="cs-figure"><img src="../assets/images/case/descent-plates.jpg" alt="Descent: the player near a glowing rune stone, with the pressure plate counter in the corner" loading="lazy"></figure>
+</div>
+<p><strong>Technical direction.</strong> As engine lead I set the architecture and priorities across rendering, entity management and tooling, so a multidisciplinary team could work in parallel without blocking each other.</p></section><section class="cs-section" id="tools"><span class="cs-step">04</span><h2>Tools for the whole team</h2>
+<p>An engine is only useful if the rest of the team can build with it. Together we shipped an in-engine editor with:</p>
+<ul>
+<li>A <strong>sprite sheet and animation clip editor</strong>, so artists can cut frames and save animation sets.</li>
+<li>A <strong>rule-based tilemap editor</strong> with layers and colliders for painting levels.</li>
+<li><strong>C# scripting</strong> that calls into the C++ core, so gameplay can be written without recompiling the engine.</li>
+<li>A <strong>particle system</strong> with fire, fireball, explosion and trajectory presets.</li>
+<li><strong>Play, pause, stop and save</strong> controls for editing scenes live, with scenes saved to JSON.</li>
+</ul>
+<div class="cs-gallery">
+  <figure class="cs-figure"><img src="../assets/images/case/engine-animation.jpg" alt="Crashouts Engine editor: creating animation clips from a sprite sheet" loading="lazy"></figure>
+  <figure class="cs-figure"><img src="../assets/images/case/engine-tilemap.jpg" alt="Crashouts Engine editor: the tilemap rule editor" loading="lazy"></figure>
+</div>
+<div class="cs-links"><button type="button" class="btn btn-ghost" data-video="../assets/videos/crashouts-level-editor.mp4" data-title="Crashouts Engine: Level Editor"><i class="fas fa-film"></i> Watch the editor tour</button></div></section><section class="cs-section" id="result"><span class="cs-step">05</span><h2>Result</h2>
+<p>Descent shipped as a complete 2D puzzle-platformer running entirely on our engine. It was submitted for course assessment and published on GitHub, and every level in it was built with the team's own editor.</p></section></article>
+        </div>
+        <nav class="wrap cs-next" aria-label="More case studies">
+            <a href="graphics-pipeline.html"><small>Previous</small><span>A real-time graphics pipeline in C++ and OpenGL</span></a>
+            <a href="mask-motel.html"><small>Next</small><span>Mask Motel: a horror game in 48 hours</span></a>
+        </nav>
+    </main>
+
+    <div class="modal" id="media-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-window is-media">
+            <div class="modal-head"><span id="modal-title"></span>
+                <div><button class="modal-btn modal-close" data-close aria-label="Close"><i class="fas fa-xmark"></i></button></div>
+            </div>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    <footer class="footer wrap">
+        <p>© 2026 Renfred Lee</p>
+        <p><a href="../">Back to portfolio</a></p>
+    </footer>
+    <script>
+    (function () {
+        var modal = document.getElementById('media-modal'), body = document.getElementById('modal-body');
+        function close() { modal.classList.remove('open'); body.innerHTML = ''; document.body.style.overflow = ''; }
+        document.addEventListener('click', function (e) {
+            var v = e.target.closest('[data-video]');
+            if (v) {
+                document.getElementById('modal-title').textContent = v.dataset.title || '';
+                body.innerHTML = '<div class="frame"><video src="' + v.dataset.video + '" controls autoplay playsinline></video></div>';
+                modal.classList.add('open'); document.body.style.overflow = 'hidden'; return;
+            }
+            if (e.target.closest('[data-close]')) close();
+            var p = e.target.closest('[data-itch]');
+            if (p) { p.parentNode.innerHTML = '<iframe src="https://itch.io/embed-upload/' + p.dataset.itch + '?color=0f1115" allowfullscreen allow="autoplay; fullscreen; gamepad" title="Game"></iframe>'; }
+        });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    })();
+    </script>
+</body>
+</html>

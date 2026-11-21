@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A solo renderer with physically based rendering and hardware-accelerated occlusion culling that holds 60+ FPS across more than 200 textured models, each shaded per light.">
+    <title>A real-time graphics pipeline in C++ and OpenGL | Renfred Lee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css?v=202611211724">
+    <link rel="stylesheet" href="case.css?v=202611211724">
+</head>
+<body>
+    <header class="nav">
+        <div class="wrap nav-inner">
+            <a href="../" class="logo">Renfred Lee</a>
+            <nav class="cs-nav">
+                <a href="../#case-studies">Case studies</a>
+                <a href="../#work">Library</a>
+                <a href="../#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="wrap cs-hero">
+            <a class="cs-back" href="../#case-studies"><i class="fas fa-arrow-left"></i> All case studies</a>
+            <p class="eyebrow">Specific skill · Real-time rendering</p>
+            <h1 class="cs-title">A real-time graphics pipeline in C++ and OpenGL</h1>
+            <p class="cs-pitch">A solo renderer with physically based rendering and hardware-accelerated occlusion culling that holds 60+ FPS across more than 200 textured models, each shaded per light.</p>
+            <dl class="cs-facts"><div><dt>Role</dt><dd>Solo project</dd></div><div><dt>Timeline</dt><dd>Jan – Apr 2026</dd></div><div><dt>Tech</dt><dd>C++, OpenGL, GLSL</dd></div><div><dt>Focus</dt><dd>Rendering and performance</dd></div></dl>
+            <div class="cs-metrics"><div class="cs-metric"><strong>60+</strong><span>frames per second, sustained</span></div><div class="cs-metric"><strong>200+</strong><span>textured models on screen</span></div><div class="cs-metric"><strong>PBR</strong><span>physically based materials</span></div><div class="cs-metric"><strong>GPU</strong><span>hardware occlusion culling</span></div></div>
+        </section>
+        
+        <div class="wrap cs-body">
+            <nav class="cs-toc" aria-label="On this page"><a href="#problem">The goal</a><a href="#constraints">Constraints</a><a href="#built">What I built</a><a href="#result">Result</a></nav>
+            <article><section class="cs-section" id="problem"><span class="cs-step">01</span><h2>The goal</h2>
+<p>Render a scene with hundreds of textured models and multiple lights at a steady 60 FPS, with materials that respond to light realistically, all built by hand on top of raw OpenGL.</p></section><section class="cs-section" id="constraints"><span class="cs-step">02</span><h2>Constraints</h2>
+<ul>
+<li><strong>Solo</strong>, alongside a full course load.</li>
+<li><strong>No engine</strong>: C++, OpenGL and GLSL only.</li>
+<li>Every light is shaded per model, so the cost grows quickly with scene size.</li>
+</ul></section><section class="cs-section" id="built"><span class="cs-step">03</span><h2>What I built</h2>
+<p><strong>Physically based rendering.</strong> Materials follow physically based shading, so metal, plastic and rough surfaces react to light consistently instead of being tweaked by hand per model.</p>
+<p><strong>Hardware-accelerated occlusion culling.</strong> The GPU checks which models are hidden behind others, and those are skipped, so shading time is only spent on what the camera can actually see. This is what keeps per-light shading affordable with 200+ models in the scene.</p></section><section class="cs-section" id="result"><span class="cs-step">04</span><h2>Result</h2>
+<p>The pipeline sustains <strong>60+ FPS with more than 200 textured models</strong>, each with per-light shading.</p></section></article>
+        </div>
+        <nav class="wrap cs-next" aria-label="More case studies">
+            <a href="mask-motel.html"><small>Previous</small><span>Mask Motel: a horror game in 48 hours</span></a>
+            <a href="descent.html"><small>Next</small><span>Descent: building the engine behind the game</span></a>
+        </nav>
+    </main>
+
+    <div class="modal" id="media-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-window is-media">
+            <div class="modal-head"><span id="modal-title"></span>
+                <div><button class="modal-btn modal-close" data-close aria-label="Close"><i class="fas fa-xmark"></i></button></div>
+            </div>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    <footer class="footer wrap">
+        <p>© 2026 Renfred Lee</p>
+        <p><a href="../">Back to portfolio</a></p>
+    </footer>
+    <script>
+    (function () {
+        var modal = document.getElementById('media-modal'), body = document.getElementById('modal-body');
+        function close() { modal.classList.remove('open'); body.innerHTML = ''; document.body.style.overflow = ''; }
+        document.addEventListener('click', function (e) {
+            var v = e.target.closest('[data-video]');
+            if (v) {
+                document.getElementById('modal-title').textContent = v.dataset.title || '';
+                body.innerHTML = '<div class="frame"><video src="' + v.dataset.video + '" controls autoplay playsinline></video></div>';
+                modal.classList.add('open'); document.body.style.overflow = 'hidden'; return;
+            }
+            if (e.target.closest('[data-close]')) close();
+            var p = e.target.closest('[data-itch]');
+            if (p) { p.parentNode.innerHTML = '<iframe src="https://itch.io/embed-upload/' + p.dataset.itch + '?color=0f1115" allowfullscreen allow="autoplay; fullscreen; gamepad" title="Game"></iframe>'; }
+        });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    })();
+    </script>
+</body>
+</html>

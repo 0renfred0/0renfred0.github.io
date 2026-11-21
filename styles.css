@@ -236,3 +236,23 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
     .detail { grid-template-columns: 1fr; }
     .detail-art { max-width: 220px; }
 }
+
+/* ==========================================================================
+   CASE STUDY CARDS (homepage)
+   ========================================================================== */
+.cases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.case-card { display: flex; flex-direction: column; background: var(--surface); border: var(--card-border); border-radius: var(--radius); overflow: hidden; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+.case-card:hover { transform: translateY(-4px); border-color: var(--border-strong); box-shadow: var(--shadow-hover); }
+.case-art { display: block; aspect-ratio: 16 / 10; background: var(--thumb-bg); overflow: hidden; }
+.case-art img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+.case-card:hover .case-art img { transform: scale(1.04); }
+.case-art-metric { display: flex; flex-direction: column; justify-content: center; padding: 1.5rem; gap: .4rem;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 107, 74, .25), transparent 60%), linear-gradient(135deg, #1e222b, #12151b); }
+.case-art-metric strong { font-family: var(--font-display); font-size: clamp(2.2rem, 4vw, 3rem); color: var(--accent); line-height: 1; }
+.case-art-metric small { color: var(--muted); font-size: .9rem; }
+.case-body { display: flex; flex-direction: column; gap: .45rem; padding: 1.3rem 1.4rem 1.5rem; flex: 1; }
+.case-body .eyebrow { margin: 0; font-size: .72rem; }
+.case-title { font-family: var(--font-display); font-size: 1.35rem; line-height: 1.2; }
+.case-desc { color: var(--muted); font-size: .95rem; flex: 1; }
+.case-more { color: var(--accent-text); font-size: .9rem; font-weight: 500; display: inline-flex; gap: .4rem; align-items: center; margin-top: .4rem; }
+@media (max-width: 980px) { .cases { grid-template-columns: 1fr; } .case-art { aspect-ratio: 16 / 8; } }

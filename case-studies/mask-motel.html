@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Built with two teammates at Global Game Jam 2026 Singapore. I programmed the camera systems and weapon interactions, laid out the levels, and made the scope call that let us ship on time: 2D characters instead of 3D.">
+    <title>Mask Motel: a horror game in 48 hours | Renfred Lee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css?v=202611211724">
+    <link rel="stylesheet" href="case.css?v=202611211724">
+</head>
+<body>
+    <header class="nav">
+        <div class="wrap nav-inner">
+            <a href="../" class="logo">Renfred Lee</a>
+            <nav class="cs-nav">
+                <a href="../#case-studies">Case studies</a>
+                <a href="../#work">Library</a>
+                <a href="../#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="wrap cs-hero">
+            <a class="cs-back" href="../#case-studies"><i class="fas fa-arrow-left"></i> All case studies</a>
+            <p class="eyebrow">Constrained · 48-hour game jam</p>
+            <h1 class="cs-title">Mask Motel: a horror game in 48 hours</h1>
+            <p class="cs-pitch">Built with two teammates at Global Game Jam 2026 Singapore. I programmed the camera systems and weapon interactions, laid out the levels, and made the scope call that let us ship on time: 2D characters instead of 3D.</p>
+            <dl class="cs-facts"><div><dt>Role</dt><dd>Gameplay programmer, level layout, visual assets</dd></div><div><dt>Team</dt><dd>3, with JustHallowed and kulu</dd></div><div><dt>Timeline</dt><dd>48 hours, Jan 2026</dd></div><div><dt>Tech</dt><dd>Unity, C#</dd></div></dl>
+            
+        </section>
+        <section class="wrap"><div class="cs-media"><div class="game-screen"><img src="https://img.itch.zone/aW1nLzI1MzE2Nzc0LnBuZw==/original/RrLPMN.png" alt="" loading="lazy"><button type="button" class="press-start" data-itch="16527448"><i class="fas fa-play"></i><span>Click to play</span></button></div></div><p class="cs-caption">Playable right here. Click the game to give it keyboard focus.</p></section>
+        <div class="wrap cs-body">
+            <nav class="cs-toc" aria-label="On this page"><a href="#problem">The problem</a><a href="#constraints">Constraints</a><a href="#decision">The key decision</a><a href="#built">What I built</a><a href="#result">Result</a></nav>
+            <article><section class="cs-section" id="problem"><span class="cs-step">01</span><h2>The problem</h2>
+<p>Make a complete, playable game from nothing in one weekend. Our idea: you're a mask artist making ends meet by crafting human disguises for monsters. You take orders through your motel room's peephole, craft the mask at your work table and pass it through the hatch in the door, while the customers get rowdier.</p></section><section class="cs-section" id="constraints"><span class="cs-step">02</span><h2>Constraints</h2>
+<ul>
+<li><strong>48 hours</strong>, start to finish.</li>
+<li><strong>3 people</strong> covering code, art, levels and audio.</li>
+<li>Had to ship <strong>web and Windows builds</strong> to itch.io by the deadline.</li>
+</ul></section><section class="cs-section" id="decision"><span class="cs-step">03</span><h2>The key decision</h2>
+<p>We weighed 3D characters, but modelling, rigging and animating them would have taken most of the weekend. <strong>I chose 2D characters instead</strong>, which kept the eerie look while freeing up time for gameplay, and then produced the supporting visual assets for the release myself.</p></section><section class="cs-section" id="built"><span class="cs-step">04</span><h2>What I built</h2>
+<ul>
+<li><strong>Camera systems</strong> for moving around the motel room and looking through the peephole.</li>
+<li><strong>Weapon interactions</strong> for dealing with customers who get out of hand.</li>
+<li><strong>Level layout</strong> of the motel room.</li>
+</ul></section><section class="cs-section" id="result"><span class="cs-step">05</span><h2>Result</h2>
+<p>Mask Motel shipped on time and is live on itch.io with web and Windows builds. Players rated it <strong>4.8 out of 5</strong> on itch.io (5 ratings, November 2026).</p>
+<div class="cs-links"><a class="btn btn-ghost" href="https://justhallowed.itch.io/mask-motel" target="_blank" rel="noopener"><i class="fab fa-itch-io"></i> Open on itch.io</a></div></section></article>
+        </div>
+        <nav class="wrap cs-next" aria-label="More case studies">
+            <a href="descent.html"><small>Previous</small><span>Descent: building the engine behind the game</span></a>
+            <a href="graphics-pipeline.html"><small>Next</small><span>A real-time graphics pipeline in C++ and OpenGL</span></a>
+        </nav>
+    </main>
+
+    <div class="modal" id="media-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-window is-media">
+            <div class="modal-head"><span id="modal-title"></span>
+                <div><button class="modal-btn modal-close" data-close aria-label="Close"><i class="fas fa-xmark"></i></button></div>
+            </div>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    <footer class="footer wrap">
+        <p>© 2026 Renfred Lee</p>
+        <p><a href="../">Back to portfolio</a></p>
+    </footer>
+    <script>
+    (function () {
+        var modal = document.getElementById('media-modal'), body = document.getElementById('modal-body');
+        function close() { modal.classList.remove('open'); body.innerHTML = ''; document.body.style.overflow = ''; }
+        document.addEventListener('click', function (e) {
+            var v = e.target.closest('[data-video]');
+            if (v) {
+                document.getElementById('modal-title').textContent = v.dataset.title || '';
+                body.innerHTML = '<div class="frame"><video src="' + v.dataset.video + '" controls autoplay playsinline></video></div>';
+                modal.classList.add('open'); document.body.style.overflow = 'hidden'; return;
+            }
+            if (e.target.closest('[data-close]')) close();
+            var p = e.target.closest('[data-itch]');
+            if (p) { p.parentNode.innerHTML = '<iframe src="https://itch.io/embed-upload/' + p.dataset.itch + '?color=0f1115" allowfullscreen allow="autoplay; fullscreen; gamepad" title="Game"></iframe>'; }
+        });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    })();
+    </script>
+</body>
+</html>
