@@ -10,7 +10,7 @@ OUT.mkdir(exist_ok=True)
 CASES = [
     {
         "slug": "descent",
-        "kicker": "Flagship · Engine lead",
+        "kicker": "Team project · C++",
         "title": "Descent: building the engine behind the game",
         "pitch": "I was engine lead on a team of 8 building our own C++ engine. I wrote its entity-component-system, contributed to the OpenGL 2D renderer and the ImGui editor tools, and set the technical direction that took it from an empty project to a finished puzzle-platformer.",
         "facts": [("Role", "Engine Lead"), ("Team", "8, Team CRASHOUTS"), ("Timeline", "Sep 2025 – Apr 2026"), ("Tech", "C++, OpenGL, C# scripting, Dear ImGui")],
@@ -53,7 +53,7 @@ CASES = [
     },
     {
         "slug": "mask-motel",
-        "kicker": "Constrained · 48-hour game jam",
+        "kicker": "Game jam · Unity",
         "title": "Mask Motel: a horror game in 48 hours",
         "pitch": "Built with two teammates at Global Game Jam 2026 Singapore. I programmed the camera systems and weapon interactions, laid out the levels, and made the scope call that let us ship on time: 2D characters instead of 3D.",
         "facts": [("Role", "Gameplay programmer, level layout, visual assets"), ("Team", "3, with JustHallowed and kulu"), ("Timeline", "48 hours, Jan 2026"), ("Tech", "Unity, C#")],
@@ -82,7 +82,7 @@ CASES = [
     },
     {
         "slug": "graphics-pipeline",
-        "kicker": "Specific skill · Real-time rendering",
+        "kicker": "Solo project · OpenGL",
         "title": "A real-time graphics pipeline in C++ and OpenGL",
         "pitch": "A solo C++ and OpenGL renderer with physically based materials, instanced rendering and GPU occlusion culling. It draws more than 200 textured models with per-light shading at over 75 FPS.",
         "facts": [("Role", "Solo project"), ("Timeline", "Jan – Apr 2026"), ("Tech", "C++, OpenGL, GLSL"), ("Focus", "Rendering and performance")],
