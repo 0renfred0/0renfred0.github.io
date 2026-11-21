@@ -84,12 +84,12 @@ CASES = [
         "slug": "graphics-pipeline",
         "kicker": "Specific skill · Real-time rendering",
         "title": "A real-time graphics pipeline in C++ and OpenGL",
-        "pitch": "A solo renderer with physically based rendering and hardware-accelerated occlusion culling that holds 60+ FPS across more than 200 textured models, each shaded per light.",
+        "pitch": "A solo C++ and OpenGL renderer with physically based materials, instanced rendering and GPU occlusion culling. It draws more than 200 textured models with per-light shading at over 75 FPS.",
         "facts": [("Role", "Solo project"), ("Timeline", "Jan – Apr 2026"), ("Tech", "C++, OpenGL, GLSL"), ("Focus", "Rendering and performance")],
-        "metrics": [("60+", "frames per second, sustained"), ("200+", "textured models on screen"), ("PBR", "physically based materials"), ("GPU", "hardware occlusion culling")],
+        "metrics": [("75+", "frames per second"), ("200+", "textured models on screen"), ("PBR", "physically based materials"), ("GPU", "hardware occlusion culling")],
         "sections": [
             ("The goal", "problem", """
-<p>Render a scene with hundreds of textured models and multiple lights at a steady 60 FPS, with materials that respond to light realistically, all built by hand on top of raw OpenGL.</p>"""),
+<p>Render a scene with hundreds of textured models and multiple lights at above 75 FPS, with materials that respond to light realistically, built by hand on top of raw OpenGL.</p>"""),
             ("Constraints", "constraints", """
 <ul>
 <li><strong>Solo</strong>, alongside a full course load.</li>
@@ -98,9 +98,10 @@ CASES = [
 </ul>"""),
             ("What I built", "built", """
 <p><strong>Physically based rendering.</strong> Materials follow physically based shading, so metal, plastic and rough surfaces react to light consistently instead of being tweaked by hand per model.</p>
-<p><strong>Hardware-accelerated occlusion culling.</strong> The GPU checks which models are hidden behind others, and those are skipped, so shading time is only spent on what the camera can actually see. This is what keeps per-light shading affordable with 200+ models in the scene.</p>"""),
+<p><strong>Instanced rendering.</strong> Models that share a mesh are drawn together in one instanced draw call instead of one call each, which cuts the CPU cost of submitting hundreds of objects every frame.</p>
+<p><strong>Hardware-accelerated occlusion culling.</strong> The GPU checks which models are hidden behind others, and those are skipped, so shading time is only spent on what the camera can actually see.</p>"""),
             ("Result", "result", """
-<p>The pipeline sustains <strong>60+ FPS with more than 200 textured models</strong>, each with per-light shading.</p>"""),
+<p>The full scene runs at <strong>over 75 FPS</strong>, which was my target for the project.</p>"""),
         ],
     },
 ]
