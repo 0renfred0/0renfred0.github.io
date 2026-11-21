@@ -17,7 +17,7 @@ const PROJECTS = [
     {
         tab: "games",
         title: "Descent",
-        description: "A 2D puzzle-platformer set deep inside a molten cavern. Leap across lava pools and spike traps, activate pressure plates to open the way forward, and keep pushing down. Built by Team CRASHOUTS in our own custom C++ engine.",
+        description: "A 2D puzzle-platformer made in our own C++ engine. I was the technical lead and wrote the ECS. Explore each level to solve puzzles and unlock doors to progress. Manage your mana and refill it at energy balls. Uncover the story through cutscenes and in-game dialogues.",
         meta: "DigiPen Singapore · Team CRASHOUTS · Custom engine",
         tags: ["C++", "C#", "Custom Engine", "2D Platformer"],
         thumb: "assets/images/descent.jpg",
